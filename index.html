@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+  <div class="border">
+    <div class="photo">
+        <img src="./assets/img/unnamed.png" alt="">
+    </div>
+    <div class="title-name">
+        <h1>Henry Elsinga</h1>
+    </div>
+    <div class="about-me">
+        <h2>Over Mij</h2>
+        <p id="text">Hallo, mijn naam is Henry Elsinga. Ik ben 20 jaar en studeer informatie technologie aan het ROC Friesepoort ter Emmeloord.</p>
+    </div>
+    <div class="gear-icon">
+        <span class="tooltip"></span>
+        <span onclick="toggleDropdown()"><i class="fas fa-cog"></i></span>
+        <div id="dropdown" class="dropdown-content">
+            <a href="#" onclick="translateText('neerlands')">Neerlands</a>
+            <a href="#" onclick="translateText('engels')">Engels</a>
+        </div>
+    </div>
+    <ul class="wrapper">
+        <li class="icon linkedin">
+          <span class="tooltip">linkedin</span>
+          <span><i class="fab fa-linkedin"></i></span>
+        </li>
+        <li class="icon twitter">
+          <span class="tooltip">Twitter</span>
+          <span><i class="fab fa-twitter"></i></span>
+        </li>
+        <li class="icon instagram">
+          <span class="tooltip">Instagram</span>
+          <span><i class="fab fa-instagram"></i></span>
+        </li>
+        <li class="icon github">
+          <span class="tooltip">Github</span>
+          <span><i class="fab fa-github"></i></span>
+        </li>
+    </ul>
+    <button class="cv-button" onclick="openModal()">Bekijk CV</button>
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe src="./CV/index.php" width="100%" height="680px"></iframe>
+  </div>
+</div>
+           
+    <script src="https://kit.fontawesome.com/82f0d65476.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+
+
+</body>
+</html>
