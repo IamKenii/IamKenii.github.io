@@ -7,9 +7,9 @@ function translateText(language) {
     var textElement = document.getElementById("text");
     
     if (language === "neerlands") {
-        textElement.textContent = "Hallo, mijn naam is Henry Elsinga. Ik ben 20 jaar en studeer informatie technologie aan het ROC Friesepoort ter Emmeloord.";
+        textElement.textContent = "*.*";
     } else if (language === "engels") {
-        textElement.textContent = "Hello, my name is Henry Elsinga. I'm 20 years old and I'm studying Information Technology at ROC Friesepoort in Emmeloord.";
+        textElement.textContent = "*.*";
     }
     
     var dropdown = document.getElementById("dropdown");
