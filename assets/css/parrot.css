@@ -1,0 +1,22 @@
+.red { color: red; }
+.yellow { color: yellow; }
+.green { color: green; }
+.blue { color: blue; }
+.magenta { color: magenta}
+.cyan { color: cyan; }
+.white { color: white; }
+
+body {
+ background-color: black;
+ color: white;
+ font-family: 'Courier New', monospace;
+ white-space: pre;
+ overflow: hidden;
+ padding: 20px;
+ text-align: center;
+}
+.link{
+ text-decoration: none;
+ color: white;
+}
+
