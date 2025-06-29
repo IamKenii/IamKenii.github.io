@@ -1,228 +1,276 @@
-const frames = [
-  `<span class="red"> 
+const translations = {
+ nl: {
+  'title': 'Cybersecurity Student & Ethical Hacker',
+  'about': 'Over Mij',
+  'about-text': 'Welkom op mijn portfolio! Ik ben Henry, 22 jaar oud en studeer HBO-ICT aan Windesheim. Mijn passie ligt bij cybersecurity en ethical hacking. Ik haal energie uit het vinden van kwetsbaarheden en het verbeteren van digitale veiligheid. ',
+  'skills': 'Vaardigheden',
+  'skill-security': 'Cybersecurity',
+  'skill-pentest': 'Penetration Testing',
+  'skill-network': 'Network Security',
+  'projects': 'Projecten',
+  'project1-title': 'Datacenter',
+  'project1-desc': 'Gedurende de laatste zes maanden van mijn schooljaar heb ik voor de IT- en technische afdelingen van mijn school een datacenter opgezet en gebouwd.',
+  'project2-title': '',
+  'project2-desc': '',
+  'project3-title': '',
+  'project3-desc': '',
+  'certifications': 'Certificeringen',
+  'cert1-desc': 'Momenteel nog niks',
+  'cert2-desc': '',
+  'cert3-desc': '',
+  'education': 'Opleidingen',
+  'edu1-period': '2024 - 2028 (verwacht)',
+  'edu1-desc': 'Specialisatie in cybersecurity, ethical hacking en informatiebeveiliging',
+  'edu2-period': '2021 - 2024',
+  'edu2-desc': 'Gespecialiseerd in het beheren, onderhouden, ontwerpen en configureren van bedrijfsnetwerken',
+  'edu3-period': '2019 - 2021',
+  'edu3-desc': 'Gespecialiseerd in het installeren en monteren van elektrotechnische benodigdheden',
+  'view-cv': 'Bekijk CV',
+  'cv-title': 'Curriculum Vitae - Henry Elsinga',
+  'cv-education': 'Opleiding',
+  'cv-experience': 'Ervaring',
+  'cv-skills': 'Technische Vaardigheden',
+  'cv-achievements': 'Prestaties',
+  'cv-contact': 'Contact'
+ },
+ en: {
+  'title': 'Cybersecurity Student & Ethical Hacker',
+  'about': 'About Me',
+  'about-text': 'Welcome to my portfolio! I am Henry, 22 years old and study HBO-ICT at Windesheim. My passion lies with cyber security and Ethical Hacking. I get energy from finding vulnerabilities and improving digital safety.',
+  'skills': 'Skills',
+  'skill-security': 'Cybersecurity',
+  'skill-pentest': 'Penetration Testing',
+  'skill-network': 'Network Security',
+  'projects': 'Projects',
+  'project1-title': 'Datacenter',
+  'project1-desc': "During the last six months of my school year, I set up and built a data center for my school's IT and technical departments.",
+  'project2-title': '',
+  'project2-desc': '',
+  'project3-title': '',
+  'project3-desc': '',
+  'certifications': 'Certifications',
+  'cert1-desc': 'At the moment nothing',
+  'cert2-desc': '',
+  'cert3-desc': '',
+  'education': 'Education',
+  'edu1-period': '2024 - 2028 (verwacht)',
+  'edu1-desc': 'Specialization in cybersecurity, ethical hacking and information security',
+  'edu2-period': '2021 - 2024',
+  'edu2-desc': 'Specialized in managing, maintaining, designing and configuring corporate networks',
+  'edu3-period': '2019 - 2021',
+  'edu3-desc': 'Specialized in installing and assembling electrical supplies',
+  'view-cv': 'View CV',
+  'cv-title': 'Curriculum Vitae - Henry Elsinga',
+  'cv-education': 'Education',
+  'cv-experience': 'Experience',
+  'cv-skills': 'Technical Skills',
+  'cv-achievements': 'Achievements',
+  'cv-contact': 'Contact'
+ }
+};
 
-                         .cccc;;cc;';c.       
-                      .,:dkdc:;;:c:,:d:.          
-                     .loc'.,cc::c:::,..;:.        
-                   .cl;....;dkdccc::,...c;        
-                  .c:,';:'..ckc',;::;....;c.      
-                .c:'.,dkkoc:ok:;llllc,,c,';:.     
-               .;c,';okkkkkkkk:;lllll,:kd;.;:,.   
-               co..:kkkkkkkkkk:;llllc':kkc..oNc   
-             .cl;.,oxkkkkkkkkkc,:cll;,okkc'.cO;   
-             ;k:..ckkkkkkkkkkkl..,;,.;xkko:',l'   
-            .,...';dkkkkkkkkkkd;.....ckkkl'.cO;   
-         .,,:,.;oo:ckkkkkkkkkkkdoc;;cdkkkc..cd,   
-      .cclo;,ccdkkl;llccdkkkkkkkkkkkkkkkd,.c;     
-     .lol:;;okkkkkxooc::coodkkkkkkkkkkkko'.oc     
-   .c:'..lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkd,.oc     
-  .lo;,:cdkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkd,.c;     
-,dx:..;lllllllllllllllllllllllllllllllllc'...     
-cNO;........................................      
-</span>`,
+let currentLanguage = 'nl';
+let currentTheme = 'light';
 
-  `<span class="yellow"> 
-                .ckx;'........':c.                
-             .,:c:::::oxxocoo::::,',.             
-            .odc'..:lkkoolllllo;..;d,             
-            ;c..:o:..;:..',;'.......;.            
-           ,c..:0Xx::o:.,cllc:,'::,.,c.           
-           ;c;lkXKXXXXl.;lllll;lKXOo;':c.         
-         ,dc.oXXXXXXXXl.,lllll;lXXXXx,c0:         
-         ;Oc.oXXXXXXXXo.':ll:;'oXXXXO;,l'         
-         'l;;kXXXXXXXXd'.'::'..dXXXXO;,l'         
-         'l;:0XXXXXXXX0x:...,:o0XXXXx,:x,         
-         'l;;kXXXXXXXXXKkol;oXXXXXXXO;oNc         
-        ,c'..ckk0XXXXXXXXXX00XXXXXXX0:;o:.        
-      .':;..:do::ooookXXXXXXXXXXXXXXXo..c;        
-    .',',:co0XX0kkkxxOXXXXXXXXXXXXXXXOc..;l.      
-  .:;'..oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXko;';:.     
-.ldc..:oOXKXXXXXXKXXKXXXXXXXXXXXXXXXXXXXo..oc     
-:0o...:dxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxo,.:,     
-cNo........................................;'     
-</span>`,
+// Theme toggle functionality
+function toggleTheme() {
+ const body = document.body;
+ const themeIcon = document.getElementById('theme-icon');
 
-  `<span class="green"> 
-            .cc;.  ...  .;c.                      
-         .,,cc:cc:lxxxl:ccc:;,.                   
-        .lo;...lKKklllookl..cO;                   
-      .cl;.,:'.okl;..''.;,..';:.                  
-     .:o;;dkd,.ll..,cc::,..,'.;:,.                
-     co..lKKKkokl.':lloo;''ol..;dl.               
-   .,c;.,xKKKKKKo.':llll;.'oOxl,.cl,.             
-   cNo..lKKKKKKKo'';llll;;okKKKl..oNc             
-   cNo..lKKKKKKKko;':c:,'lKKKKKo'.oNc             
-   cNo..lKKKKKKKKKl.....'dKKKKKxc,l0:             
-   .c:'.lKKKKKKKKKk;....lKKKKKKo'.oNc             
-     ,:.'oxOKKKKKKKOxxxxOKKKKKKxc,;ol:.           
-     ;c..'':oookKKKKKKKKKKKKKKKKKk:.'clc.         
-   ,xl'.,oxo;'';oxOKKKKKKKKKKKKKKKOxxl:::;,.      
-  .dOc..lKKKkoooookKKKKKKKKKKKKKKKKKKKxl,;ol.     
-  cx,';okKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKl..;lc.   
-  co..:dddddddddddddddddddddddddddddddddl::',::.  
-  co...........................................   
-</span>`,
-
-  `<span class="bleu"> 
-           .ccccccc.                              
-      .,,,;cooolccoo;;,,.                         
-     .dOx;..;lllll;..;xOd.                        
-   .cdo;',loOXXXXXkll;';odc.                      
-  ,ol:;c,':oko:cccccc,...ckl.                     
-  ;c.;kXo..::..;c::'.......oc                     
-,dc..oXX0kk0o.':lll;..cxxc.,ld,                   
-kNo.'oXXXXXXo',:lll;..oXXOo;cOd.                  
-KOc;oOXXXXXXo.':lol;..dXXXXl';xc                  
-Ol,:k0XXXXXX0c.,clc'.:0XXXXx,.oc                  
-KOc;dOXXXXXXXl..';'..lXXXXXo..oc                  
-dNo..oXXXXXXXOx:..'lxOXXXXXk,.:; ..               
-cNo..lXXXXXXXXXOolkXXXXXXXXXkl,..;:';.            
-.,;'.,dkkkkk0XXXXXXXXXXXXXXXXXOxxl;,;,;l:.        
-  ;c.;:''''':doOXXXXXXXXXXXXXXXXXXOdo;';clc.      
-  ;c.lOdood:'''oXXXXXXXXXXXXXXXXXXXXXk,..;ol.     
-  ';.:xxxxxocccoxxxxxxxxxxxxxxxxxxxxxxl::'.';;.   
-  ';........................................;l'   
-</span>`,
-
-   `<span class="magenta">                                                  
-        .;:;;,.,;;::,.                            
-     .;':;........'co:.                           
-   .clc;'':cllllc::,.':c.                         
-  .lo;;o:coxdllllllc;''::,,.                      
-.c:'.,cl,.'l:',,;;'......cO;                      
-do;';oxoc;:l;;llllc'.';;'.,;.                     
-c..ckkkkkkkd,;llllc'.:kkd;.':c.                   
-'.,okkkkkkkkc;lllll,.:kkkdl,cO;                   
-..;xkkkkkkkkc,ccll:,;okkkkk:,co,                  
-..,dkkkkkkkkc..,;,'ckkkkkkkc;ll.                  
-..'okkkkkkkko,....'okkkkkkkc,:c.                  
-c..ckkkkkkkkkdl;,:okkkkkkkkd,.',';.               
-d..':lxkkkkkkkkxxkkkkkkkkkkkdoc;,;'..'.,.         
-o...'';llllldkkkkkkkkkkkkkkkkkkdll;..'cdo.        
-o..,l;'''''';dkkkkkkkkkkkkkkkkkkkkdlc,..;lc.      
-o..;lc;;;;;;,,;clllllllllllllllllllllc'..,:c.     
-o..........................................;'     
-</span>`,
-
-
-    `<span class="cyan">                                                 
-           .,,,,,,,,,.                            
-         .ckKxodooxOOdcc.                         
-      .cclooc'....';;cool.                        
-     .loc;;;;clllllc;;;;;:;,.                     
-   .c:'.,okd;;cdo:::::cl,..oc                     
-  .:o;';okkx;';;,';::;'....,:,.                   
-  co..ckkkkkddkc,cclll;.,c:,:o:.                  
-  co..ckkkkkkkk:,cllll;.:kkd,.':c.                
-.,:;.,okkkkkkkk:,cclll;.ckkkdl;;o:.               
-cNo..ckkkkkkkkko,.;loc,.ckkkkkc..oc               
-,dd;.:kkkkkkkkkx;..;:,.'lkkkkko,.:,               
-  ;:.ckkkkkkkkkkc.....;ldkkkkkk:.,'               
-,dc..'okkkkkkkkkxoc;;cxkkkkkkkkc..,;,.            
-kNo..':lllllldkkkkkkkkkkkkkkkkkdcc,.;l.           
-KOc,c;''''''';lldkkkkkkkkkkkkkkkkkc..;lc.         
-xx:':;;;;,.,,...,;;cllllllllllllllc;'.;od,        
-cNo.....................................oc        
-</span>`,
-
-  `<span class="red">                                                   
-                                                  
-                   .ccccccc.                      
-               .ccckNKOOOOkdcc.                   
-            .;;cc:ccccccc:,:c::,,.                
-         .c;:;.,cccllxOOOxlllc,;ol.               
-        .lkc,coxo:;oOOxooooooo;..:,               
-      .cdc.,dOOOc..cOd,.',,;'....':l.             
-      cNx'.lOOOOxlldOc..;lll;.....cO;             
-     ,do;,:dOOOOOOOOOl'':lll;..:d:''c,            
-     co..lOOOOOOOOOOOl'':lll;.'lOd,.cd.           
-     co.'dOOOOOOOOOOOo,.;llc,.,dOOc..dc           
-     co..lOOOOOOOOOOOOc.';:,..cOOOl..oc           
-   .,:;.'::lxOOOOOOOOOo:'...,:oOOOc.'dc           
-   ;Oc..cl'':lldOOOOOOOOdcclxOOOOx,.cd.           
-  .:;';lxl''''':lldOOOOOOOOOOOOOOc..oc            
-,dl,.'cooc:::,....,::coooooooooooc'.c:            
-cNo.................................oc            
-</span>`,
-
-                                                  
-   `<span class="white">                                                  
-                                                  
-                        .cccccccc.                
-                  .,,,;;cc:cccccc:;;,.            
-                .cdxo;..,::cccc::,..;l.           
-               ,do:,,:c:coxxdllll:;,';:,.         
-             .cl;.,oxxc'.,cc,.';;;'...oNc         
-             ;Oc..cxxxc'.,c;..;lll;...cO;         
-           .;;',:ldxxxdoldxc..;lll:'...'c,        
-           ;c..cxxxxkxxkxxxc'.;lll:'','.cdc.      
-         .c;.;odxxxxxxxxxxxd;.,cll;.,l:.'dNc      
-        .:,''ccoxkxxkxxxxxxx:..,:;'.:xc..oNc      
-      .lc,.'lc':dxxxkxxxxxxxol,...',lx:..dNc      
-     .:,',coxoc;;ccccoxxxxxxxxo:::oxxo,.cdc.      
-  .;':;.'oxxxxxc''''';cccoxxxxxxxxxxxc..oc        
-,do:'..,:llllll:;;;;;;,..,;:lllllllll;..oc        
-cNo.....................................oc        
-</span>`,
-
-   `<span class="red">                                                  
-                                                  
-                              .ccccc.             
-                         .cc;'coooxkl;.           
-                     .:c:::c:,,,,,;c;;,.'.        
-                   .clc,',:,..:xxocc;'..c;        
-                  .c:,';:ox:..:c,,,,,,...cd,      
-                .c:'.,oxxxxl::l:.,loll;..;ol.     
-                ;Oc..:xxxxxxxxx:.,llll,....oc     
-             .,;,',:loxxxxxxxxx:.,llll;.,,.'ld,   
-            .lo;..:xxxxxxxxxxxx:.'cllc,.:l:'cO;   
-           .:;...'cxxxxxxxxxxxxoc;,::,..cdl;;l'   
-         .cl;':,'';oxxxxxxdxxxxxx:....,cooc,cO;   
-     .,,,::;,lxoc:,,:lxxxxxxxxxxxo:,,;lxxl;'oNc   
-   .cdxo;':lxxxxxxc'';cccccoxxxxxxxxxxxxo,.;lc.   
-  .loc'.'lxxxxxxxxocc;''''';ccoxxxxxxxxx:..oc     
-olc,..',:cccccccccccc:;;;;;;;;:ccccccccc,.'c,     
-Ol;......................................;l'      
-</span>`,
-
-   `<span class="red">                                                  
-                              ,ddoodd,            
-                         .cc' ,ooccoo,'cc.        
-                      .ccldo;...',,...;oxdc.      
-                   .,,:cc;.,'..;lol;;,'..lkl.     
-                  .dOc';:ccl;..;dl,.''.....oc     
-                .,lc',cdddddlccld;.,;c::'..,cc:.  
-                cNo..:ddddddddddd;':clll;,c,';xc  
-               .lo;,clddddddddddd;':clll;:kc..;'  
-             .,c;..:ddddddddddddd:';clll,;ll,..   
-             ;Oc..';:ldddddddddddl,.,c:;';dd;..   
-           .''',:c:,'cdddddddddddo:,''..'cdd;..   
-         .cdc';lddd:';lddddddddddddd;.';lddl,..   
-      .,;::;,cdddddol;;lllllodddddddlcldddd:.'l;  
-     .dOc..,lddddddddlcc:;'';cclddddddddddd;;ll.  
-   .coc,;::ldddddddddddddlcccc:ldddddddddl:,cO;   
-,xl::,..,cccccccccccccccccccccccccccccccc:;':xx,  
-cNd.........................................;lOc  
-</span>`
-];
-
-
-const colors = ['red', 'yellow', 'green', 'blue', 'magenta', 'cyan', 'white'];
-
-let index = 0;
-const output = document.getElementById('output');
-
-function parseAnsi(text) {
-  return text.replace(/<span.*?>|<\/span>/g, "");
+ if (currentTheme === 'light') {
+  body.setAttribute('data-theme', 'dark');
+  themeIcon.className = 'fas fa-sun';
+  currentTheme = 'dark';
+ } else {
+  body.setAttribute('data-theme', 'light');
+  themeIcon.className = 'fas fa-moon';
+  currentTheme = 'light';
+ }
 }
 
-function getRandomColor() {
-  return colors[Math.floor(Math.random() * colors.length)];
+// Language change functionality
+function changeLanguage(lang) {
+ currentLanguage = lang;
+
+ // Update active language button
+ document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.classList.remove('active');
+  if (btn.getAttribute('data-lang') === lang) {
+   btn.classList.add('active');
+  }
+ });
+
+ // Update all translatable elements
+ document.querySelectorAll('[data-translate]').forEach(element => {
+  const key = element.getAttribute('data-translate');
+  if (translations[lang] && translations[lang][key]) {
+   element.textContent = translations[lang][key];
+  }
+ });
+
+ // Update HTML lang attribute
+ document.documentElement.lang = lang;
 }
 
-setInterval(() => {
-  const randomColor = getRandomColor();
-  output.innerHTML = `<span class="${randomColor}">${frames[index]}</span>`;
-  index = (index + 1) % frames.length;
-}, 80);
+// Modal functionality
+function openModal() {
+ const modal = document.getElementById('cvModal');
+ modal.style.display = 'block';
+ setTimeout(() => {
+  modal.classList.add('show');
+ }, 10);
+ document.body.style.overflow = 'hidden';
+}
 
+function closeModal() {
+ const modal = document.getElementById('cvModal');
+ modal.classList.remove('show');
+ setTimeout(() => {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+ }, 300);
+}
+
+// Close modal when clicking outside
+window.onclick = function (event) {
+ const modal = document.getElementById('cvModal');
+ if (event.target === modal) {
+  closeModal();
+ }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function (event) {
+ if (event.key === 'Escape') {
+  closeModal();
+ }
+});
+
+// Smooth scrolling for better UX
+document.addEventListener('DOMContentLoaded', function () {
+ // Add smooth entrance animation
+ const portfolioCard = document.querySelector('.portfolio-card');
+ portfolioCard.style.opacity = '0';
+ portfolioCard.style.transform = 'translateY(50px)';
+
+ setTimeout(() => {
+  portfolioCard.style.transition = 'all 0.8s ease';
+  portfolioCard.style.opacity = '1';
+  portfolioCard.style.transform = 'translateY(0)';
+ }, 100);
+
+ // Add hover effects to skill items
+ const skillItems = document.querySelectorAll('.skill-item');
+ skillItems.forEach((item, index) => {
+  item.style.animationDelay = `${index * 0.1}s`;
+ });
+
+ // Add entrance animation to project items
+ const projectItems = document.querySelectorAll('.project-item');
+ projectItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(30px)';
+  setTimeout(() => {
+   item.style.transition = 'all 0.6s ease';
+   item.style.opacity = '1';
+   item.style.transform = 'translateY(0)';
+  }, 200 + (index * 100));
+ });
+
+ // Add entrance animation to certification items
+ const certItems = document.querySelectorAll('.cert-item');
+ certItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateX(-30px)';
+  setTimeout(() => {
+   item.style.transition = 'all 0.6s ease';
+   item.style.opacity = '1';
+   item.style.transform = 'translateX(0)';
+  }, 400 + (index * 100));
+ });
+
+ // Add entrance animation to education items
+ const educationItems = document.querySelectorAll('.education-item');
+ educationItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateX(30px)';
+  setTimeout(() => {
+   item.style.transition = 'all 0.6s ease';
+   item.style.opacity = '1';
+   item.style.transform = 'translateX(0)';
+  }, 600 + (index * 100));
+ });
+});
+
+// Add dynamic typing effect to name (optional enhancement)
+function typeWriter(element, text, speed = 100) {
+ let i = 0;
+ element.innerHTML = '';
+
+ function type() {
+  if (i < text.length) {
+   element.innerHTML += text.charAt(i);
+   i++;
+   setTimeout(type, speed);
+  }
+ }
+
+ type();
+}
+
+// Initialize portfolio
+document.addEventListener('DOMContentLoaded', function () {
+ // Set initial theme based on user preference
+ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  toggleTheme();
+ }
+
+ // Add particle animation to background
+ createParticles();
+});
+
+// Create floating particles for enhanced visual effect
+function createParticles() {
+ const container = document.querySelector('.floating-shapes');
+ const particleCount = 15;
+
+ for (let i = 0; i < particleCount; i++) {
+  const particle = document.createElement('div');
+  particle.className = 'shape';
+  particle.style.width = Math.random() * 8 + 4 + 'px';
+  particle.style.height = particle.style.width;
+  particle.style.left = Math.random() * 100 + '%';
+  particle.style.top = Math.random() * 100 + '%';
+  particle.style.animationDelay = Math.random() * 6 + 's';
+  particle.style.animationDuration = (Math.random() * 10 + 8) + 's';
+  particle.style.opacity = Math.random() * 0.1 + 0.05;
+
+  container.appendChild(particle);
+ }
+}
+
+// Add intersection observer for scroll animations
+const observerOptions = {
+ threshold: 0.1,
+ rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+  if (entry.isIntersecting) {
+   entry.target.style.opacity = '1';
+   entry.target.style.transform = 'translateY(0)';
+  }
+ });
+}, observerOptions);
+
+// Observe all sections for scroll animations
+document.addEventListener('DOMContentLoaded', function () {
+ const sections = document.querySelectorAll('.about-section, .skills-section, .projects-section, .certifications-section, .education-section');
+ sections.forEach(section => {
+  section.style.opacity = '0';
+  section.style.transform = 'translateY(50px)';
+  section.style.transition = 'all 0.8s ease';
+  observer.observe(section);
+ });
+});
