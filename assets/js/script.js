@@ -1,6 +1,6 @@
 const translations = {
  nl: {
-  'title': 'Cybersecurity Student & Ethical Hacker',
+  'title': 'HBO-ICT Student Cloud & Security Engineer | IT Specialist (MBO 4)',
   'about': 'Over Mij',
   'about-text': 'Welkom op mijn portfolio! Ik ben Henry, 22 jaar oud en studeer HBO-ICT aan Windesheim. Mijn passie ligt bij cybersecurity en ethical hacking. Ik haal energie uit het vinden van kwetsbaarheden en het verbeteren van digitale veiligheid. ',
   'skills': 'Vaardigheden',
@@ -34,7 +34,7 @@ const translations = {
   'cv-contact': 'Contact'
  },
  en: {
-  'title': 'Cybersecurity Student & Ethical Hacker',
+  'title': 'HBO-ICT Student Cloud & Security Engineer | IT Specialist (MBO 4)',
   'about': 'About Me',
   'about-text': 'Welcome to my portfolio! I am Henry, 22 years old and study HBO-ICT at Windesheim. My passion lies with cyber security and Ethical Hacking. I get energy from finding vulnerabilities and improving digital safety.',
   'skills': 'Skills',
