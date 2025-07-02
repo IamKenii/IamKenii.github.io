@@ -1,6 +1,6 @@
 const translations = {
  nl: {
-  'title': 'HBO-ICT Student Cloud & Security Engineer | IT Specialist (MBO 4)',
+  'title': 'HBO-ICT Student Cloud & Security Engineer \n & \n IT Specialist (MBO 4)',
   'about': 'Over Mij',
   'about-text': 'Welkom op mijn portfolio! Ik ben Henry, 22 jaar oud en studeer HBO-ICT aan Windesheim. Mijn passie ligt bij cybersecurity en ethical hacking. Ik haal energie uit het vinden van kwetsbaarheden en het verbeteren van digitale veiligheid. ',
   'skills': 'Vaardigheden',
