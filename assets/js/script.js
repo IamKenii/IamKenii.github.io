@@ -1,6 +1,6 @@
 const translations = {
  nl: {
-  'title': 'HBO-ICT Student Cloud & Security Engineer<br>&<br>IT Specialist (MBO 4)',
+  'title': 'Cybersecurity Student & Ethical Hacker',
   'about': 'Over Mij',
   'about-text': 'Welkom op mijn portfolio! Ik ben Henry, 22 jaar oud en studeer HBO-ICT aan Windesheim. Mijn passie ligt bij cybersecurity en ethical hacking. Ik haal energie uit het vinden van kwetsbaarheden en het verbeteren van digitale veiligheid. ',
   'skills': 'Vaardigheden',
@@ -34,39 +34,39 @@ const translations = {
   'cv-contact': 'Contact'
  },
  en: {
-  "title": "HBO-ICT Student Cloud & Security Engineer<br>&<br>IT Specialist (MBO 4)",
-  "about": "About Me",
-  "about-text": "Welcome to my portfolio! I'm Henry, 22 years old, and currently studying HBO-ICT at Windesheim University of Applied Sciences. I'm passionate about cybersecurity and ethical hacking. I enjoy discovering vulnerabilities and improving digital security.",
-  "skills": "Skills",
-  "skill-security": "Cybersecurity",
-  "skill-pentest": "Penetration Testing",
-  "skill-network": "Network Security",
-  "projects": "Projects",
-  "project1-title": "Data Center",
-  "project1-desc": "During the last six months of my school year, I set up and built a data center for my school's IT and technical departments.",
-  "project2-title": "",
-  "project2-desc": "",
-  "project3-title": "",
-  "project3-desc": "",
-  "certifications": "Certifications",
-  "cert1-desc": "No certifications yet",
-  "cert2-desc": "",
-  "cert3-desc": "",
-  "education": "Education",
-  "edu1-period": "2024 - 2028 (expected)",
-  "edu1-desc": "Specializing in cybersecurity, ethical hacking, and information security",
-  "edu2-period": "2021 - 2024",
-  "edu2-desc": "Specialized in managing, maintaining, designing, and configuring corporate networks",
-  "edu3-period": "2019 - 2021",
-  "edu3-desc": "Specialized in installing and assembling electrical systems",
-  "view-cv": "View CV",
-  "cv-title": "Curriculum Vitae - Henry Elsinga",
-  "cv-education": "Education",
-  "cv-experience": "Experience",
-  "cv-skills": "Technical Skills",
-  "cv-achievements": "Achievements",
-  "cv-contact": "Contact"
-}
+  'title': 'Cybersecurity Student & Ethical Hacker',
+  'about': 'About Me',
+  'about-text': 'Welcome to my portfolio! I am Henry, 22 years old and study HBO-ICT at Windesheim. My passion lies with cyber security and Ethical Hacking. I get energy from finding vulnerabilities and improving digital safety.',
+  'skills': 'Skills',
+  'skill-security': 'Cybersecurity',
+  'skill-pentest': 'Penetration Testing',
+  'skill-network': 'Network Security',
+  'projects': 'Projects',
+  'project1-title': 'Datacenter',
+  'project1-desc': "During the last six months of my school year, I set up and built a data center for my school's IT and technical departments.",
+  'project2-title': '',
+  'project2-desc': '',
+  'project3-title': '',
+  'project3-desc': '',
+  'certifications': 'Certifications',
+  'cert1-desc': 'At the moment nothing',
+  'cert2-desc': '',
+  'cert3-desc': '',
+  'education': 'Education',
+  'edu1-period': '2024 - 2028 (verwacht)',
+  'edu1-desc': 'Specialization in cybersecurity, ethical hacking and information security',
+  'edu2-period': '2021 - 2024',
+  'edu2-desc': 'Specialized in managing, maintaining, designing and configuring corporate networks',
+  'edu3-period': '2019 - 2021',
+  'edu3-desc': 'Specialized in installing and assembling electrical supplies',
+  'view-cv': 'View CV',
+  'cv-title': 'Curriculum Vitae - Henry Elsinga',
+  'cv-education': 'Education',
+  'cv-experience': 'Experience',
+  'cv-skills': 'Technical Skills',
+  'cv-achievements': 'Achievements',
+  'cv-contact': 'Contact'
+ }
 };
 
 let currentLanguage = 'nl';
@@ -146,89 +146,6 @@ document.addEventListener('keydown', function (event) {
  }
 });
 
-// Smooth scrolling for better UX
-document.addEventListener('DOMContentLoaded', function () {
- // Add smooth entrance animation
- const portfolioCard = document.querySelector('.portfolio-card');
- portfolioCard.style.opacity = '0';
- portfolioCard.style.transform = 'translateY(50px)';
-
- setTimeout(() => {
-  portfolioCard.style.transition = 'all 0.8s ease';
-  portfolioCard.style.opacity = '1';
-  portfolioCard.style.transform = 'translateY(0)';
- }, 100);
-
- // Add hover effects to skill items
- const skillItems = document.querySelectorAll('.skill-item');
- skillItems.forEach((item, index) => {
-  item.style.animationDelay = `${index * 0.1}s`;
- });
-
- // Add entrance animation to project items
- const projectItems = document.querySelectorAll('.project-item');
- projectItems.forEach((item, index) => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateY(30px)';
-  setTimeout(() => {
-   item.style.transition = 'all 0.6s ease';
-   item.style.opacity = '1';
-   item.style.transform = 'translateY(0)';
-  }, 200 + (index * 100));
- });
-
- // Add entrance animation to certification items
- const certItems = document.querySelectorAll('.cert-item');
- certItems.forEach((item, index) => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateX(-30px)';
-  setTimeout(() => {
-   item.style.transition = 'all 0.6s ease';
-   item.style.opacity = '1';
-   item.style.transform = 'translateX(0)';
-  }, 400 + (index * 100));
- });
-
- // Add entrance animation to education items
- const educationItems = document.querySelectorAll('.education-item');
- educationItems.forEach((item, index) => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateX(30px)';
-  setTimeout(() => {
-   item.style.transition = 'all 0.6s ease';
-   item.style.opacity = '1';
-   item.style.transform = 'translateX(0)';
-  }, 600 + (index * 100));
- });
-});
-
-// Add dynamic typing effect to name (optional enhancement)
-function typeWriter(element, text, speed = 100) {
- let i = 0;
- element.innerHTML = '';
-
- function type() {
-  if (i < text.length) {
-   element.innerHTML += text.charAt(i);
-   i++;
-   setTimeout(type, speed);
-  }
- }
-
- type();
-}
-
-// Initialize portfolio
-document.addEventListener('DOMContentLoaded', function () {
- // Set initial theme based on user preference
- if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  toggleTheme();
- }
-
- // Add particle animation to background
- createParticles();
-});
-
 // Create floating particles for enhanced visual effect
 function createParticles() {
  const container = document.querySelector('.floating-shapes');
@@ -252,7 +169,7 @@ function createParticles() {
 // Add intersection observer for scroll animations
 const observerOptions = {
  threshold: 0.1,
- rootMargin: '0px 0px -100px 0px'
+ rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -260,17 +177,180 @@ const observer = new IntersectionObserver((entries) => {
   if (entry.isIntersecting) {
    entry.target.style.opacity = '1';
    entry.target.style.transform = 'translateY(0)';
+   entry.target.classList.add('animated');
   }
  });
 }, observerOptions);
 
-// Observe all sections for scroll animations
-document.addEventListener('DOMContentLoaded', function () {
+// Initialize all animations and effects
+function initializeAnimations() {
+ // Main portfolio card entrance animation
+ const portfolioCard = document.querySelector('.portfolio-card');
+ if (portfolioCard) {
+  portfolioCard.style.opacity = '0';
+  portfolioCard.style.transform = 'translateY(50px)';
+
+  setTimeout(() => {
+   portfolioCard.style.transition = 'all 0.8s ease';
+   portfolioCard.style.opacity = '1';
+   portfolioCard.style.transform = 'translateY(0)';
+  }, 100);
+ }
+
+ // Skill items hover effects with staggered animation
+ const skillItems = document.querySelectorAll('.skill-item');
+ skillItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(20px)';
+  item.style.transition = 'all 0.6s ease';
+  item.style.animationDelay = `${index * 0.1}s`;
+
+  setTimeout(() => {
+   item.style.opacity = '1';
+   item.style.transform = 'translateY(0)';
+  }, 300 + (index * 50));
+ });
+
+ // Project items entrance animation
+ const projectItems = document.querySelectorAll('.project-item');
+ projectItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(30px)';
+  item.style.transition = 'all 0.6s ease';
+
+  setTimeout(() => {
+   item.style.opacity = '1';
+   item.style.transform = 'translateY(0)';
+  }, 500 + (index * 100));
+ });
+
+ // Certification items entrance animation
+ const certItems = document.querySelectorAll('.cert-item');
+ certItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateX(-30px)';
+  item.style.transition = 'all 0.6s ease';
+
+  setTimeout(() => {
+   item.style.opacity = '1';
+   item.style.transform = 'translateX(0)';
+  }, 700 + (index * 100));
+ });
+
+ // Education items entrance animation
+ const educationItems = document.querySelectorAll('.education-item');
+ educationItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateX(30px)';
+  item.style.transition = 'all 0.6s ease';
+
+  setTimeout(() => {
+   item.style.opacity = '1';
+   item.style.transform = 'translateX(0)';
+  }, 400 + (index * 100));
+ });
+
+ // Social links entrance animation
+ const socialLinks = document.querySelectorAll('.social-link');
+ socialLinks.forEach((link, index) => {
+  link.style.opacity = '0';
+  link.style.transform = 'translateY(20px)';
+  link.style.transition = 'all 0.6s ease';
+
+  setTimeout(() => {
+   link.style.opacity = '1';
+   link.style.transform = 'translateY(0)';
+  }, 900 + (index * 100));
+ });
+
+ // Setup scroll-triggered animations for sections
  const sections = document.querySelectorAll('.about-section, .skills-section, .projects-section, .certifications-section, .education-section');
  sections.forEach(section => {
   section.style.opacity = '0';
   section.style.transform = 'translateY(50px)';
   section.style.transition = 'all 0.8s ease';
   observer.observe(section);
+ });
+}
+
+// Add dynamic typing effect to name (optional enhancement)
+function typeWriter(element, text, speed = 100) {
+ let i = 0;
+ element.innerHTML = '';
+
+ function type() {
+  if (i < text.length) {
+   element.innerHTML += text.charAt(i);
+   i++;
+   setTimeout(type, speed);
+  }
+ }
+
+ type();
+}
+
+// Initialize portfolio on DOM content loaded
+document.addEventListener('DOMContentLoaded', function () {
+ // Set initial theme based on user preference
+ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  toggleTheme();
+ }
+
+ // Initialize all animations
+ initializeAnimations();
+
+ // Add particle animation to background
+ createParticles();
+
+ // Optional: Add typing effect to name
+ const nameElement = document.querySelector('.name');
+ if (nameElement) {
+  const originalText = nameElement.textContent;
+  setTimeout(() => {
+   typeWriter(nameElement, originalText, 150);
+  }, 1000);
+ }
+});
+
+// Add smooth hover effects for interactive elements
+document.addEventListener('DOMContentLoaded', function () {
+ // Enhanced skill item hover effects
+ const skillItems = document.querySelectorAll('.skill-item');
+ skillItems.forEach(item => {
+  item.addEventListener('mouseenter', function () {
+   this.style.transform = 'translateY(-5px) scale(1.05)';
+   this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+  });
+
+  item.addEventListener('mouseleave', function () {
+   this.style.transform = 'translateY(0) scale(1)';
+   this.style.boxShadow = '';
+  });
+ });
+
+ // Enhanced project item hover effects
+ const projectItems = document.querySelectorAll('.project-item');
+ projectItems.forEach(item => {
+  item.addEventListener('mouseenter', function () {
+   this.style.transform = 'translateY(-3px)';
+   this.style.boxShadow = '0 8px 20px rgba(0,0,0,0.12)';
+  });
+
+  item.addEventListener('mouseleave', function () {
+   this.style.transform = 'translateY(0)';
+   this.style.boxShadow = '';
+  });
+ });
+
+ // Enhanced social link hover effects
+ const socialLinks = document.querySelectorAll('.social-link');
+ socialLinks.forEach(link => {
+  link.addEventListener('mouseenter', function () {
+   this.style.transform = 'translateY(-2px) scale(1.1)';
+  });
+
+  link.addEventListener('mouseleave', function () {
+   this.style.transform = 'translateY(0) scale(1)';
+  });
  });
 });
