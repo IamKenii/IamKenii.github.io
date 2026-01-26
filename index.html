@@ -3,223 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henry Elsinga - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Henry Elsinga - Cloud & Security Engineer</title>
+    <meta name="description" content="HBO-ICT student gespecialiseerd in cybersecurity, ethical hacking en cloud security. Beschikbaar voor stages en projecten.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body data-theme="light">
+    <!-- Animated Background -->
     <div class="background-animation">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="#home" class="nav-logo">HE</a>
+            <div class="nav-links-desktop">
+                <a href="#about" class="nav-link">Over</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projecten</a>
+                <a href="#contact" class="nav-link nav-link-highlight">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Control Panel -->
+    <div class="controls">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="changeLanguage('nl')" data-lang="nl">NL</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" data-lang="en">EN</button>
         </div>
     </div>
 
+    <!-- Main Container -->
     <div class="container">
-        <div class="portfolio-card">
-            <div class="theme-toggle" onclick="toggleTheme()">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </div>
+        <main class="portfolio-wrapper">
+            
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span data-translate="available">Beschikbaar voor projecten</span>
+                        </div>
+                        <h1 class="hero-title">
+                            <span data-translate="hi" class="hero-greeting">Hoi, ik ben</span><br>
+                            <span class="name-highlight">Henry Elsinga</span>
+                        </h1>
+                        <p class="hero-subtitle" data-translate="hero-subtitle">
+                            HBO-ICT student Cloud & Security Engineering met een sterke basis in elektrotechniek en IT-infrastructuur. Ervaring met Windows, Linux, Cisco- en UniFi-netwerken en security. Gericht op het ontwerpen en beveiligen van betrouwbare (cloud)omgevingen.
+                        </p>
+                        
+                        <!-- Stats -->
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label" data-translate="stat1">Jaar IT Ervaring</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label" data-translate="stat2">Technische Skills</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label" data-translate="stat3">Leergierig</div>
+                            </div>
+                        </div>
 
-            <div class="language-selector">
-                <button class="lang-btn active" onclick="changeLanguage('nl')" data-lang="nl">NL</button>
-                <button class="lang-btn" onclick="changeLanguage('en')" data-lang="en">EN</button>
-            </div>
+                        <!-- CTA Buttons -->
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn btn-primary">
+                                <span data-translate="cta-contact">Neem Contact Op</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary">
+                                <span data-translate="cta-work">Bekijk Werk</span>
+                            </a>
+                        </div>
 
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='60' cy='60' r='60' fill='url(%23grad)'/%3E%3Ctext x='60' y='75' text-anchor='middle' fill='white' font-size='42' font-family='Inter, Arial' font-weight='600'%3EHE%3C/text%3E%3C/svg%3E" alt="Henry Elsinga">
-                </div>
-                <h1 class="name">Henry Elsinga</h1>
-                <p class="title">HBO-ICT Student Cloud & Security Engineer<br>&<br>IT Specialist (MBO 4)</p>
-            </div>
-
-            <div class="about-section">
-                <h2 class="section-title" data-translate="about">
-                    <i class="fas fa-user"></i>
-                    Over Mij
-                </h2>
-                <p class="about-text" data-translate="about-text">
-                    Welkom op mijn portfolio! Ik ben Henry, 23 jaar oud en studeer HBO-ICT aan Windesheim. 
-                    Mijn passie ligt bij cybersecurity en ethical hacking. Ik haal energie uit het vinden van kwetsbaarheden en het verbeteren van digitale veiligheid. 
-                </p>
-            </div>
-
-            <div class="education-section">
-                <h2 class="section-title" data-translate="education">
-                    <i class="fas fa-graduation-cap"></i>
-                    Opleidingen
-                </h2>
-                <div class="education-list">
-                    <div class="education-item">
-                        <div class="education-icon"><i class="fas fa-university"></i></div>
-                        <div class="education-info">
-                            <h4>HBO-ICT</h4>
-                            <p class="education-school">Windesheim Hogeschool</p>
-                            <p class="education-period" data-translate="edu1-period">2024 - 2028 (verwacht)</p>
-                            <p class="education-desc" data-translate="edu1-desc">Specialisatie in cybersecurity, ethical hacking en informatiebeveiliging</p>
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/kenixwastaken" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/IamKenii" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="education-item">
-                        <div class="education-icon"><i class="fas fa-school"></i></div>
-                        <div class="education-info">
-                            <h4>MBO-4 | Expert IT Systems & Devices </h4>
-                            <p class="education-school">Roc Friesepoort ter Emmeloord</p>
-                            <p class="education-period" data-translate="edu2-period">2021 - 2024</p>
-                            <p class="education-desc" data-translate="edu2-desc">Gespecialiseerd in het beheren, onderhouden, ontwerpen en configureren van bedrijfsnetwerken</p>
+
+                    <div class="hero-visual">
+                        <div class="profile-card glass-card">
+                            <div class="profile-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230099ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='100' fill='url(%23grad)'/%3E%3Ctext x='100' y='130' text-anchor='middle' fill='white' font-size='70' font-family='Outfit, Arial' font-weight='700'%3EHE%3C/text%3E%3C/svg%3E" alt="Henry Elsinga">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Henry Elsinga</h3>
+                                <p data-translate="profile-role">Cybersecurity Student</p>
+                                <div class="profile-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Nederland</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-icon"><i class="fas fa-school"></i></div>
-                        <div class="education-info">
-                            <h4>MBO-2 | Monteur elektrotechnische installaties</h4>
-                            <p class="education-school">Roc Friesepoort ter Emmeloord</p>
-                            <p class="education-period" data-translate="edu3-period">2019 - 2021</p>
-                            <p class="education-desc" data-translate="edu3-desc">Gespecialiseerd in het installeren en monteren van elektrotechnische benodigdheden</p>
+
+                        <!-- Floating badges -->
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-shield-alt"></i>
+                            <span data-translate="badge1">Security</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-code"></i>
+                            <span data-translate="badge2">Development</span>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-cloud"></i>
+                            <span data-translate="badge3">Cloud</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
+            </section>
 
-            <div class="skills-section">
-                <h2 class="section-title" data-translate="skills">
-                    <i class="fas fa-code"></i>
-                    Vaardigheden
-                </h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="skill-name" data-translate="skill-security">Cybersecurity</div>
+            <!-- About Section -->
+            <section id="about" class="content-section about-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-user"></i>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-bug"></i></div>
-                        <div class="skill-name" data-translate="skill-pentest">Penetration Testing</div>
+                    <h2 class="section-title" data-translate="about">Over Mij</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="glass-card about-card">
+                        <p class="about-text" data-translate="about-text">
+                            Ik ben Henry, HBO-ICT student Cloud & Security Engineering aan Windesheim. Mijn achtergrond ligt in zowel elektrotechniek als IT-infrastructuur, waardoor ik systemen begrijp van fysieke installatie tot cloudomgeving.
+                        </p>
+                        <p class="about-text" data-translate="about-text2">
+                            Tijdens mijn MBO-opleidingen heb ik gewerkt met Windows, Linux, Cisco en netwerk- en securityoplossingen. Ik combineer praktijkervaring met een security-first mindset.
+                        </p>
+                        <p class="about-text" data-translate="about-text3">
+                            Ik ben nog volop aan het leren, maar elke dag word ik beter. Mijn focus ligt op cloud computing, hybride infrastructuren en het beveiligen van informatiesystemen binnen moderne omgevingen. Daarnaast verdiep ik mij actief in de wereld van cybersecurity.
+                        </p>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-python"></i></div>
-                        <div class="skill-name">Python</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-linux"></i></div>
-                        <div class="skill-name">Linux</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                        <div class="skill-name" data-translate="skill-network">Network Security</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-database"></i></div>
-                        <div class="skill-name">SQL</div>
+                    <div class="glass-card highlights-card">
+                        <h3 data-translate="highlights">Wat ik kan</h3>
+                        <ul class="highlights-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="highlight1">HBO-ICT student (2de jaar)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="highlight2">Datacenter opgebouwd (MBO Keuzedeel project)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="highlight3">Ervaring met netwerken & Linux</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="highlight4">Geïnteresseerd in security</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="projects-section">
-                <h2 class="section-title" data-translate="projects">
-                    <i class="fas fa-project-diagram"></i>
-                    Projecten
-                </h2>
+            <!-- Education Section -->
+            <section class="content-section education-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="section-title" data-translate="education">Opleiding</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="timeline-badge current" data-translate="current">Huidig</div>
+                            <h3 class="timeline-title">HBO-ICT | Cloud & Security Enegeneer</h3>
+                            <p class="timeline-school">Windesheim Hogeschool</p>
+                            <p class="timeline-period" data-translate="edu1-period">2024 - 2028 (verwacht)</p>
+                            <p class="timeline-desc" data-translate="edu1-desc">Eerste jaar HBO-ICT met focus op cybersecurity. Ik leer hier over ethical hacking, netwerkbeveiliging en informatie security.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="timeline-badge completed" data-translate="completed">Afgerond</div>
+                            <h3 class="timeline-title">HBO-ICT | Propedeuze</h3>
+                            <p class="timeline-school">Windesheim Hogeschool</p>
+                            <p class="timeline-period" data-translate="edu2-period">2024 - 2025</p>
+                            <p class="timeline-desc" data-translate="edu2-desc">Eerste jaar HBO-ICT kennis gemaakt met de volle breedte van ICT: hardware, software en gebruikersgericht denken. Ik deed basiskennis op van systemen en infrastructuur en legde zo een sterke fundering voor mijn verdere specialisatie.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="timeline-badge completed" data-translate="completed">Afgerond</div>
+                            <h3 class="timeline-title">MBO-4 | Expert IT Systems & Devices</h3>
+                            <p class="timeline-school">ROC Friesepoort te Emmeloord</p>
+                            <p class="timeline-period" data-translate="edu3-period">2021 - 2024</p>
+                            <p class="timeline-desc" data-translate="edu3-desc">Hier heb ik de basis gelegd: netwerken configureren, servers opzetten, troubleshooten. Tijdens mijn stage heb ik het datacenter van mijn school opgezet, wat echt veel ervaring heeft opgeleverd.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="timeline-badge completed" data-translate="completed">Afgerond</div>
+                            <h3 class="timeline-title">MBO-2 | Monteur Elektrotechnische Installaties</h3>
+                            <p class="timeline-school">ROC Friesepoort te Emmeloord</p>
+                            <p class="timeline-period" data-translate="edu4-period">2019 - 2021</p>
+                            <p class="timeline-desc" data-translate="edu4-desc">Gespecialiseerd in het installeren en monteren van elektrotechnische benodigdheden. Fundamentele kennis van hardware en infrastructuur.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="content-section skills-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2 class="section-title" data-translate="skills">Vaardigheden & Expertise</h2>
+                </div>
+                
+                <div class="skills-categories">
+                    <!-- Security Skills -->
+                    <div class="skill-category">
+                        <h3 class="category-title" data-translate="cat-security">
+                            <i class="fas fa-shield-alt"></i>
+                            Security & Hacking
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h4 class="skill-name" data-translate="skill-network">Network Security</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="--skill-level: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4 class="skill-name" data-translate="skill-security">Cybersecurity</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="--skill-level: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <h4 class="skill-name" data-translate="skill-pentest">Penetration Testing</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="--skill-level: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="skill-category">
+                        <h3 class="category-title" data-translate="cat-tech">
+                            <i class="fas fa-laptop-code"></i>
+                            Technische Skills
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-linux"></i>
+                                </div>
+                                <h4 class="skill-name">Linux</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="--skill-level: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h4 class="skill-name">Python</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="--skill-level: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4 class="skill-name">SQL</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="--skill-level: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificates Section -->
+            <section id="certificates" class="content-section certificates-section">
+
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h2 class="section-title" data-translate="certificates">Certificaten</h2>
+                </div>
+
+                <div class="certificates-grid">
+
+                    <!-- VCA Certificate -->
+                    <div class="certificate-card glass-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-name">VCA</h3>
+                            <p class="certificate-issuer" data-translate="cert-vca-issuer">Veiligheid, Gezondheid en Milieu</p>
+                            <p class="certificate-desc" data-translate="cert-vca-desc">Officieel veiligheidscertificaat voor werken in risicovolle omgevingen</p>
+                        </div>
+                    </div>
+
+                    <!-- Certified Secure Certificates -->
+                    <div class="certificate-card glass-card featured-cert">
+                        <div class="certificate-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-name" data-translate="cert-featured">Security Focus</h3>
+                            <p class="certificate-issuer" data-translate="cert-featured">Certified Secure</p>
+                            <ul class="certificate-modules">
+                                <li><i class="fas fa-check"></i> <span data-translate="cert-sec-essentials">Essentials Security</span></li>
+                                <li><i class="fas fa-check"></i> <span data-translate="cert-sec-specialist">Security Specialist</span></li>
+                                <li><i class="fas fa-check"></i> <span data-translate="cert-sec-server">Server Security Specialist</span></li>
+                                <li><i class="fas fa-check"></i> <span data-translate="cert-sec-internet">Veilig Internet</span></li>
+                                <li><i class="fas fa-check"></i> <span data-translate="cert-sec-internet-plus">Veilig Internet Plus</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Projects Section -->
+            <section id="projects" class="content-section projects-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h2 class="section-title" data-translate="projects">Projecten & Realisaties</h2>
+                </div>
                 <div class="projects-grid">
-                    <div class="project-item">
-                        <div class="project-title" data-translate="project1-title">Datacenter</div>
-                        <div class="project-description" data-translate="project1-desc">
-                            Gedurende de laatste zes maanden van mijn schooljaar heb ik voor de IT- en technische afdelingen van mijn school een datacenter opgezet en gebouwd.
+                    <article class="project-card glass-card featured">
+                        <div class="project-header">
+                            <div class="project-icon-large">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3 class="project-title" data-translate="project1-title">School Datacenter Implementatie</h3>
+                        </div>
+                        <p class="project-description" data-translate="project1-desc">
+                            Tijdens mijn laatste half jaar op het MBO mocht ik het nieuwe datacenter voor school opzetten. Van kabels trekken tot servers configureren - het was echt tof om te zien hoe alles tot leven kwam. Heb veel geleerd over netwerken, servers en vooral over problemen oplossen.
+                        </p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>6 maanden</span>
+                            </div>
+                            <div class="project-detail">
+                                <i class="fas fa-users"></i>
+                                <span data-translate="solo">Solo project</span>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Networking</span>
+                            <span class="tag">Infrastructure</span>
                             <span class="tag">Security</span>
                         </div>
-                    </div>
-                    <!-- <div class="project-item">
-                        <div class="project-title" data-translate="project2-title">Network Security Monitor</div>
-                        <div class="project-description" data-translate="project2-desc">
-                            Real-time netwerkmonitoring systeem dat verdachte activiteiten detecteert en alerts genereert. 
-                            Gebouwd met Python en verschillende security libraries.
+                    </article>
+
+                    <article class="project-card glass-card upcoming">
+                        <div class="project-icon-large upcoming-icon">
+                            <i class="fas fa-hourglass-half"></i>
                         </div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">Monitoring</span>
-                        </div>
-                    </div> -->
-                    <!-- <div class="project-item">
-                        <div class="project-title" data-translate="project3-title">Ethical Hacking Lab</div>
-                        <div class="project-description" data-translate="project3-desc">
-                            Persoonlijke lab omgeving voor het oefenen van ethical hacking technieken, 
-                            inclusief virtual machines en vulnerable applicaties.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Virtual Machines</span>
-                            <span class="tag">Penetration Testing</span>
-                            <span class="tag">Security Research</span>
-                        </div>
-                    </div> -->
+                        <h3 class="project-title" data-translate="upcoming">Meer projecten komen eraan...</h3>
+                        <p class="project-description" data-translate="upcoming-desc">
+                            Ik werk momenteel aan verschillende security en development projecten. Check binnenkort terug voor updates!
+                        </p>
+                    </article>
                 </div>
-            </div>
+            </section>
 
-            <div class="certifications-section">
-                <h2 class="section-title" data-translate="certifications">
-                    <i class="fas fa-certificate"></i>
-                    Certificeringen
-                </h2>
-                <div class="certifications-list">
-                    <div class="cert-item">
-                        <div class="cert-icon"><i class="fas fa-award"></i></div>
-                        <div class="cert-info">
-                            <h4></h4>
-                            <p data-translate="cert1-desc">Momenteel nog niks</p>
-                        </div>
+            <!-- Contact Section -->
+            <section id="contact" class="content-section contact-section">
+                <div class="section-header centered">
+                    <div class="section-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <!-- <div class="cert-item">
-                        <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="cert-info">
-                            <h4>Ethical Hacker (CEH)</h4>
-                            <p data-translate="cert2-desc">Gepland voor Q4 2025</p>
-                        </div>
-                    </div> -->
-                    <!-- <div class="cert-item">
-                        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="cert-info">
-                            <h4>HBO-ICT Cybersecurity</h4>
-                            <p data-translate="cert3-desc">Windesheim - Verwacht afstuderen 2026</p>
-                        </div>
-                    </div> -->
+                    <h2 class="section-title" data-translate="contact-title">Laten We Connecten</h2>
+                    <p class="section-subtitle" data-translate="contact-subtitle">
+                        Ben je op zoek naar een gemotiveerde IT student voor een stage of project? Laten we connecten!
+                    </p>
                 </div>
-             </div>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" class="social-link linkedin" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                    <div class="tooltip">LinkedIn</div>
-                </a>
-                <a href="https://twitter.com/kenixwastaken" class="social-link twitter" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                    <div class="tooltip">Twitter</div>
-                </a>
-                <a href="https://github.com/IamKenii" class="social-link github" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <div class="tooltip">GitHub</div>
-                </a>
-            </div>
+                <div class="contact-grid">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 data-translate="email">Email</h3>
+                        <a href="mailto:henryelsinga@hotmail.nl" class="contact-link">henryelsinga@hotmail.nl</a>
+                    </div>
 
-            <!-- <button class="cv-button" onclick="openModal()">
-                <span data-translate="view-cv">Bekijk CV</span>
-            </button> -->
-        </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" target="_blank" class="contact-link">Henry Elsinga</a>
+                    </div>
+
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/IamKenii" target="_blank" class="contact-link">@IamKenii</a>
+                    </div>
+                </div>
+
+                <div class="cta-section glass-card">
+                    <h3 data-translate="cta-title">Klaar om te praten?</h3>
+                    <p data-translate="cta-text">Of je nu een vraag hebt, een project wilt bespreken, of gewoon wilt netwerken - ik hoor graag van je!</p>
+                    <a href="mailto:henryelsinga@hotmail.nl" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-translate="send-message">Stuur Een Bericht</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
     </div>
 
-    <!-- <div class="modal" id="cvModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="cv-content">
-                <h2 data-translate="cv-title">VD</h2>
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Henry Elsinga. <span data-translate="footer">Gebouwd met passie voor cybersecurity.</span></p>
+            <div class="footer-links">
+                <a href="#home" data-translate="back-top">Terug naar boven</a>
             </div>
         </div>
-    </div> -->
+    </footer>
+
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
-
