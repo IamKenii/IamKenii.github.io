@@ -57,7 +57,7 @@ const translations = {
         'certificates': 'Certificaten',
         'cert-vca-issuer': 'Veiligheid, Gezondheid en Milieu',
         'cert-vca-desc': 'Officieel veiligheidscertificaat voor werken in risicovolle omgevingen',
-        'cert-featured': 'Security Focus',
+        'cert-featured': 'Certified Secure',
         
         // Certified Secure Modules
         'cert-sec-essentials': 'Essentials Security',
@@ -143,7 +143,7 @@ const translations = {
         'certificates': 'Certificates',
         'cert-vca-issuer': 'Safety, Health, and Environment',
         'cert-vca-desc': 'Official safety certificate for working in hazardous environments',
-        'cert-featured': 'Security Focus',
+        'cert-featured': 'Certified Secure',
         
         // Certified Secure Modules
         'cert-sec-essentials': 'Essentials Security',
