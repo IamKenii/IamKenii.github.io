@@ -233,7 +233,12 @@ function changeLanguage(lang) {
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            const htmlKeys = ["about-text3", "upcoming-desc"];
+            if (htmlKeys.includes(key)) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
         }
     });
 
