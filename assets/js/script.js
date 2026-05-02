@@ -21,7 +21,7 @@ const translations = {
         'about': 'Over Mij',
         'about-text': 'Ik ben Henry, HBO-ICT student Cloud & Security Engineering aan Windesheim. Mijn achtergrond ligt in zowel elektrotechniek als IT-infrastructuur, waardoor ik systemen begrijp van fysieke installatie tot cloudomgeving.',
         'about-text2': 'Tijdens mijn MBO-opleidingen heb ik gewerkt met Windows, Linux, Cisco en netwerk- en securityoplossingen. Ik combineer praktijkervaring met een security-first mindset.',
-        'about-text3': 'Ik ben nog volop aan het leren, maar elke dag word ik beter. Mijn focus ligt op cloud computing, hybride infrastructuren en het beveiligen van informatiesystemen binnen moderne omgevingen. Daarnaast verdiep ik mij actief in de wereld van cybersecurity.',
+        'about-text3': 'Ik ben nog volop aan het leren, maar elke dag word ik beter. Mijn focus ligt op cloud computing, hybride infrastructuren en het beveiligen van informatiesystemen binnen moderne omgevingen. Daarnaast verdiep ik mij actief in de wereld van cybersecurity. De software en tools die ik bouw publiceer ik onder de naam <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.',
         'highlights': 'Wat ik kan',
         'highlight1': 'HBO-ICT student (2de jaar)',
         'highlight2': 'Datacenter opgebouwd (MBO Keuzedeel project)',
@@ -73,7 +73,7 @@ const translations = {
         'project1-desc': 'Tijdens mijn laatste half jaar op het MBO mocht ik het nieuwe datacenter voor school opzetten. Van kabels trekken tot servers configureren - het was echt tof om te zien hoe alles tot leven kwam. Heb veel geleerd over netwerken, servers en vooral over problemen oplossen.',
         'solo': 'Solo project',
         'upcoming': 'Meer projecten komen eraan...',
-        'upcoming-desc': 'Ik werk momenteel aan verschillende security en development projecten. Check binnenkort terug voor updates!',
+        'upcoming-desc': 'Ik werk momenteel aan verschillende security en development projecten. Deze publiceer ik onder <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check binnenkort terug voor updates!',
         
         // Contact
         'contact-title': 'Laten We Connecten',
@@ -106,7 +106,7 @@ const translations = {
         'about': 'About Me',
         'about-text': 'I\'m Henry, an HBO-ICT Cloud & Security Engineering student at Windesheim. My background lies in both electrical engineering and IT infrastructure, allowing me to understand systems from physical installation to cloud environments.',
         'about-text2': 'During my MBO programs, I worked extensively with Windows, Linux, Cisco and network and security solutions. I combine hands-on experience with a security-first mindset.',
-        'about-text3': 'I am still actively learning, but improving every day. My focus is on cloud computing, hybrid infrastructures and securing information systems within modern environments. In addition, I am actively exploring the field of cybersecurity.',
+        'about-text3': 'I am still actively learning, but improving every day. My focus is on cloud computing, hybrid infrastructures and securing information systems within modern environments. In addition, I am actively exploring the field of cybersecurity. The software and tools I build are published under the name <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.',
         'highlights': 'What I do',
         'highlight1': 'HBO-ICT student (2nd year)',
         'highlight2': 'Built a datacenter (MBO elective project)',
@@ -162,7 +162,7 @@ const translations = {
         'solo': 'Solo project',
         'upcoming': 'More projects coming soon...',
         'upcoming-desc':
-        'I am currently working on several cloud, security and development projects. Check back soon for updates!',
+        'I am currently working on several cloud, security and development projects. These are published under <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check back soon for updates!',
         
         // Contact
         'contact-title': 'Let\'s Connect',
